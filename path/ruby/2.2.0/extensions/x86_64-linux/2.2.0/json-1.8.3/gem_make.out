@@ -1,0 +1,9 @@
+/usr/bin/ruby2.2 -r ./siteconf20150611-11089-1pzndmp.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+make "DESTDIR=" install
