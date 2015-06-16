@@ -1,7 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'pg'
+
 gem  'bootstrap-sass', '~> 3.3.1'
+
+gem 'devise'
+
+gem 'paperclip'
 
 #gem 'rails', github: 'rails/rails'
 
@@ -17,7 +22,8 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # gem 'therubyracer', platforms: :ruby
 
-
+gem 'pry'
+gem 'pry-nav'
 gem 'jquery-rails'
 
 gem 'turbolinks'

@@ -1,0 +1,12 @@
+<%= image_tag @movie.image.url(:medium) %>
+
+<p>
+  <strong>List:</strong>
+  <%= @movie.title %>
+  <%= @movie.year %>
+  <%= @movie.rating %>
+  <%= @movie.description %>
+</p>
+
+<%= link_to 'Edit', edit_movie_path(@movie) %> |
+<%= link_to 'Back', movies_path %>
