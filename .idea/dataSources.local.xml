@@ -2,7 +2,6 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="Rails emovies: development" uuid="165a0836-c68b-4dc5-acb0-64203b2a7014">
-      <first-sync>true</first-sync>
       <user-name>postgres</user-name>
       <user-password>dfcbdfc6dfc5dfc1df9bdf99df9bdf98</user-password>
     </data-source>

@@ -1,5 +1,7 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
 
   def index
@@ -12,7 +14,7 @@ class MoviesController < ApplicationController
 
 
   def new
-    @movie = Movie.new
+    @movie = current_user.movies.build
   end
 
 
@@ -21,7 +23,7 @@ class MoviesController < ApplicationController
 
 
   def create
-    @movie = Movie.new(movie_params)
+    @movie = current_user.movies.build(movie_params)
 
     respond_to do |format|
       if @movie.save
@@ -62,8 +64,13 @@ class MoviesController < ApplicationController
       @movie = Movie.find(params[:id])
     end
 
+  def correct_user
+    @movie = current_user.movies.find_by(id: params[:id])
+    redirect_to movies_path, notice: "Not authorized to edit this movie" if @movie.nil?
+  end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def movie_params
-      params.require(:movie).permit(:title, :year, :rating, :description, :images)
+      params.require(:movie).permit(:title, :year, :rating, :description, :image)
     end
 end

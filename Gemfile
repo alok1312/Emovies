@@ -6,7 +6,7 @@ gem  'bootstrap-sass', '~> 3.3.1'
 
 gem 'devise'
 
-gem 'paperclip'
+gem 'paperclip', '~> 4.2.3'
 
 #gem 'rails', github: 'rails/rails'
 
