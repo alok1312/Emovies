@@ -7,6 +7,8 @@ gem  'bootstrap-sass', '~> 3.3.1'
 gem 'devise'
 
 gem 'paperclip', '~> 4.2.3'
+gem 'aws-sdk', '~> 2.1.0'
+gem 'masonry-rails'
 
 
 group :production do
@@ -33,6 +35,7 @@ gem 'pry-nav'
 gem 'jquery-rails'
 
 gem 'turbolinks'
+gem 'jquery-turbolinks'
 
 gem 'jbuilder', '~> 2.0'
 
